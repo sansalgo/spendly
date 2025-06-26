@@ -1,54 +1,74 @@
-# React + TypeScript + Vite
+# Spendly
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Spendly is a simple and minimal expense tracker. Users can add expenses with custom tags and dates, and view their spending grouped by date or tag. Built with React, TailwindCSS, Zustand, and Shadcn UI, Spendly offers a lightweight and customizable experience.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Introduction](#introduction)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [How to Run](#how-to-run)
+- [Screenshots](#screenshots)
+- [Live Demo](#live-demo)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Introduction
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Spendly is designed for users who want a quick and focused way to track their expenses without the clutter of full-featured finance apps. Whether you're managing daily purchases or categorizing expenses by tags, Spendly keeps things intuitive and clean.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Add expenses with tags and dates
+- Group and view expenses by date or tag
+- Minimal, responsive UI
+- Basic customization options for themes or preferences
+- Fast and reactive experience using Zustand and Shadcn components
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Tech Stack
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Frontend**: React, TailwindCSS, ShadCN UI
+- **State Management**: Zustand
+
+## How to Run
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/sansalgo/spendly.git
+   cd spendly
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   bun install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   bun run dev
+   ```
+
+4. Open your browser and go to:
+
+   ```
+   http://localhost:5173
+   ```
+
+## Screenshots
+
+![Spendly Screenshot](screenshots/spendly-ui.png)
+
+## Live Demo
+
+Try the app here: [Spendly Live Demo](https://spendly0.netlify.app/)
+
+## Contributing
+
+Contributions are welcome! If you have suggestions, bug reports, or feature requests, feel free to open an issue or pull request.
+
+## License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
